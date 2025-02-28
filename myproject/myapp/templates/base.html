@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>{% block title %}Little Lemon{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Include header -->
+    {% include 'partials/_header.html' %}
+
+    <main>
+        <!-- Begin block content --> 
+        {% block content %}
+        {% endblock %}
+        <!-- End block content -->
+    </main>
+
+    <!-- Optional: Include footer -->
+    {% include 'partials/_footer.html' %}
+
+</body>
+</html>

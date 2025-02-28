@@ -1,0 +1,12 @@
+{% if user == "admin" %} 
+<h2>Welcome {{ user }}</h2> 
+{% else %} 
+<h2>Welcome Guest. You dont have admin access</h2> 
+{% endif %} 
+
+{% extends 'base.html'%}
+{% load static %}
+{% block content%}
+<p> Home</p>
+<p> This is the Home page for Little Lemon </p>
+{% endblock %}
