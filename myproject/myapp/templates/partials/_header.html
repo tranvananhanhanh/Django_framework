@@ -1,7 +1,17 @@
 {% load static %}
-<footer style="background-color: #EE9972; "></footer>
+<footer style="background-color: #aebeaa; "></footer>
 <header>
-  <img src="{% static 'images/img.jpg' %}" />
+  <img src="{% static 'images/little-lemon-grey-logo2.png' %}" />
+    <style>
+    header img {
+            max-width: 80%; /* Ảnh không vượt quá chiều rộng của phần tử cha */
+            height: 50% ; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ khung hình */
+            display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+        }
+
+</style>
+
+
 </header>
   <nav>
     <ul>
@@ -10,4 +20,32 @@
       <li><a href="{% url 'menu' %}">Menu</a></li>
       <li><a href="{% url 'book' %}">Book</a></li> 
     </ul>
+
+    <style>
+      nav {
+          background-color: rgb(67, 73, 67); /* Màu xanh lá cây nhạt */
+          padding: 10px;
+          text-align: center; /* Căn giữa các liên kết */
+      }
+
+      nav ul {
+          list-style: none; /* Loại bỏ dấu chấm đầu dòng */
+          margin: 0;
+          padding: 0;
+          display: inline-block; /* Cho phép các mục li nằm trên cùng một hàng */
+      }
+
+      nav li {
+          display: inline-block; /* Hiển thị các mục li trên cùng một hàng */
+          margin: 0 50px; /* Khoảng cách giữa các mục */
+      }
+
+      nav a {
+          font-size: 2.0em;
+          text-decoration: none; /* Loại bỏ gạch chân mặc định */
+          color: rgb(246, 236, 236); /* Màu chữ */
+      }
+
+      /* Thêm các kiểu dáng khác nếu cần */
+  </style>
   </nav>

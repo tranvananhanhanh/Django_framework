@@ -1,9 +1,38 @@
 {% load static %}
 <footer>
-  <article>
-    <img src="{% static ''%}" />
-  </article>
-  <article>
-    <p>Copyright Little Lemon</p>
-  </article>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="{% static 'images/little-lemon-grey-logo2.png' %}" alt="Little Lemon Grey Logo">
+    </div>
+    <div class="footer-separator"></div>
+    <div class="footer-text">
+      <p>Copyright Little Lemon</p>
+    </div>
+    <style>
+            footer {
+            background-color: #f0f0f0; /* Nền xám nhạt */
+            padding: 20px;
+          }
+
+          .footer-content {
+            display: flex;
+            align-items: center; /* Căn giữa theo chiều dọc */
+          }
+
+          .footer-logo img {
+            height: 50px; /* Điều chỉnh kích thước logo */
+            margin-right: 20px;
+          }
+
+          .footer-separator {
+            flex-grow: 1; /* Cho phép đường kẻ ngang kéo dài */
+            border-top: 1px solid #ccc; /* Đường kẻ ngang màu xám nhạt */
+            margin: 0 20px;
+          }
+
+          .footer-text p {
+            margin: 0;
+          }
+    </style>
+  </div>
 </footer>

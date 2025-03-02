@@ -6,10 +6,6 @@ class Drinks(models.Model):
     price=models.IntegerField
 class MenuCategory(models.Model):
     menu_category_name=models.CharField(max_length=200)
-class Meu(models.Model):
-    menu_item=models.CharField(max_length=200)
-    price=models.IntegerField(null=False)
-    category_id=models.ForeignKey(MenuCategory,on_delete=models.PROTECT,default=None,related_name="category_name")
 
 class Menu(models.Model):
     name=models.CharField(max_length=200)
