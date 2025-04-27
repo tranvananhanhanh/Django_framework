@@ -12,7 +12,8 @@ def myview(request):
     if request.user.is_anonymous(): 
         raise PermissionDenied() 
     
-    
+
+
 def home(request):
     return render(request, 'home.html')
 def about(request):
@@ -27,6 +28,18 @@ def menu(request):
 def display_menu_item(request, pk): 
     menu_item = get_object_or_404(Menu, pk=pk)  # Trả về 404 nếu không tìm thấy
     return render(request, 'menu_item.html', {"menu_item": menu_item})
+
+
+def book_table(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            #return redirect('booking_success')  # Chuyển hướng sau khi đặt bàn thành công
+    else:
+        form = BookingForm()
+    return render(request, 'book.html', {'form': form})
+
 
 
 def form_view(request):

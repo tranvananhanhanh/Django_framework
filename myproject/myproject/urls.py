@@ -9,7 +9,7 @@ urlpatterns = [
     path('about/' ,views.about,name='about'),
     path('menu/' ,views.menu,name='menu'),
     path('menu_item/<int:pk>/', views.display_menu_item, name="menu_item"),
-    path('book/',views.book,name='book'),
+    path('book/',views.book_table,name='book'),
 
     path('admin/', admin.site.urls),  # Đảm bảo rằng đường dẫn admin đã được thêm
     path('tags/',views.tags),

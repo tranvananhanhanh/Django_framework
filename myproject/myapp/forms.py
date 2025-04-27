@@ -1,11 +1,11 @@
 from django import forms
 from .models import Booking
 
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = '__all__'
-        
+        fields = "__all__"
 
 class Demoform(forms.Form):
     name=forms.CharField(widget=forms.Textarea(attrs={'rows':5}))

@@ -10,7 +10,7 @@ from .models import Person
 admin.site.register(Drinks)
 admin.site.register(Menu)
 admin.site.register(MenuCategory)
-#admin.site.register(Booking)
+admin.site.register(Booking)
 admin.site.unregister(User) 
 # Register your models here.
 @admin.register(User) 
